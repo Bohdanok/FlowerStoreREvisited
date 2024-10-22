@@ -12,17 +12,17 @@ import lombok.Setter;
 @Setter
 public class Order {
 
-    private List<Item<?>> items;
+    private List<Item< ? >> items;
     private Delivery deliveryStrategy;
     private Payment paymentStrategy;
 
-    public Order(List<Item<?>> items, Delivery delivery, Payment payment) {
+    public Order(List<Item< ? >> items, Delivery delivery, Payment payment) {
         this.items = items;
         this.deliveryStrategy = delivery;
         this.paymentStrategy = payment;
     }
 
-    public void setItems(List<Item<?>> newItems) {
+    public void setItems(List<Item< ? >> newItems) {
         items = newItems;
     }
 
@@ -37,11 +37,11 @@ public class Order {
         System.out.println("The order processed! Wait for your goods my man!");
     }
 
-    public void addItem(Item<?> item) {
+    public void addItem(Item< ? > item) {
         this.items.add(item);
     }
 
-    public void removeItem(Item<?> item) {
+    public void removeItem(Item< ? > item) {
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).matches(item)) {
                 items.remove(i);

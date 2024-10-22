@@ -3,13 +3,11 @@ package com.example.demo;
 import lombok.Getter;
 
 @Getter
-public abstract class Item <T>{
+public abstract class Item<T> {
     private double price;
     private String description;
 
-    // public boolean matches(Item item);
-
-    public boolean matches(Item item){
+    public boolean matches(Item<?> item) {
         return this.price == item.price && this.description == item.description;
     }
 

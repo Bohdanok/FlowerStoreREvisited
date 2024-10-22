@@ -13,7 +13,7 @@ import com.example.demo.flower.FlowerType;
 
 @SpringBootApplication
 public class FlowerController {
-
+    public static final int AHUNDRED = 100;
     // private final FlowerService flowerService;
 
     // public FlowerController(FlowerService flowerService) {
@@ -27,6 +27,7 @@ public class FlowerController {
 
     @GetMapping
     public List<Flower> hello() {
-        return List.of(new Flower(FlowerColor.RED, 100, 100, FlowerType.CHAMOMILE));
+        return List.of(new Flower(FlowerColor.RED, AHUNDRED, 
+        AHUNDRED, FlowerType.CHAMOMILE));
     }
 }

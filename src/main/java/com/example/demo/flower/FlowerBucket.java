@@ -8,7 +8,7 @@ import com.example.demo.Item;
 import lombok.Getter;
 
 @Getter
-public class FlowerBucket extends Item{
+public class FlowerBucket extends Item<FlowerBucket> {
     private List<FlowerPack> flowerPacks;
 
     public FlowerBucket() {
@@ -40,8 +40,8 @@ public class FlowerBucket extends Item{
     }
 
     public Flower searchFlower(FlowerSpec spec) {
-        for(FlowerPack flowerPack : this.flowerPacks) {
-            if(flowerPack.getFlower().match(spec)) {
+        for (FlowerPack flowerPack : this.flowerPacks) {
+            if (flowerPack.getFlower().match(spec)) {
                 return flowerPack.getFlower();
             }
         }

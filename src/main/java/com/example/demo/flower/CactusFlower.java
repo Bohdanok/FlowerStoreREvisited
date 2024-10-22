@@ -1,16 +1,16 @@
-package com.example.demo.flower;
+// package com.example.demo.flower;
 
-import com.example.demo.Item;
+// import com.example.demo.Item;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+// import lombok.AllArgsConstructor;
+// import lombok.NoArgsConstructor;
 
-@AllArgsConstructor @NoArgsConstructor
-public class CactusFlower extends Item{
+// @AllArgsConstructor @NoArgsConstructor
+// public class CactusFlower extends Item{
 
-    private double price;
-        @Override
-        public double price() {
-            return this.price;
-    }
-}
+//     private double price;
+//         @Override
+//         public double price() {
+//             return this.price;
+//     }
+// }

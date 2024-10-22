@@ -12,26 +12,27 @@ import com.example.demo.flower.FlowerType;
 @SpringBootApplication
 @RestController
 public class DemoApplication {
-	public static final int ANUNDRED = 100;
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+    public static final int ANUNDRED = 100;
 
-	@GetMapping("delivery")
-	public String deliverOrder(Order order) {
-		return order.getDeliveryStrategy().getDeliveryNotification();
-		// order.calculateTotalPrice();
-	}
-	
-	@GetMapping("payment")
-	public String payOrder(Order order) {
-		return order.getPaymentStrategy().description();
-		// order.calculateTotalPrice();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
-	@GetMapping("/ListOfFlowers")
+    @GetMapping("delivery")
+    public String deliverOrder(Order order) {
+        return order.getDeliveryStrategy().getDeliveryNotification();
+        // order.calculateTotalPrice();
+    }
+    
+    @GetMapping("payment")
+    public String payOrder(Order order) {
+        return order.getPaymentStrategy().description();
+        // order.calculateTotalPrice();
+    }
+
+    @GetMapping("/ListOfFlowers")
     public static List<Flower> hello() {
         return List.of(new Flower(FlowerColor.RED, ANUNDRED, ANUNDRED,
-		 FlowerType.CHAMOMILE));
+            FlowerType.CHAMOMILE));
     }
 }

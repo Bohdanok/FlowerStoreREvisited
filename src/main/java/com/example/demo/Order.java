@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Order <T> {
+public class Order<T> {
 
     private List<Item<T>> items;
     private Delivery deliveryStrategy;

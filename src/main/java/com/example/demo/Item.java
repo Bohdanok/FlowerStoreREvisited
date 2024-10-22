@@ -7,9 +7,9 @@ public abstract class Item<T> {
     private double price;
     private String description;
 
-    public boolean matches(Item< ? > item) {
-        return this.price == item.price && 
-        this.description.equals(item.description);
+    public boolean matches(Item<T> item) {
+        return this.price == item.price
+        && this.description.equals(item.description);
     }
 
     public abstract double price();
